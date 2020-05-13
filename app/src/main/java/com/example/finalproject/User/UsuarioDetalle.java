@@ -1,14 +1,16 @@
-package com.example.finalproject;
+package com.example.finalproject.User;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class EmpresaDetalleOferta extends AppCompatActivity {
+import com.example.finalproject.R;
+
+public class UsuarioDetalle extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_empresa_detalle_oferta);
+        setContentView(R.layout.activity_usuario_detalle);
     }
 }
