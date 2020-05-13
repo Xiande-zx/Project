@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">FinalProject</string>
+
+    ------user-------
+    <string name="name">Nom</string>
+    <string name="surname">Cognom</string>
+    <string name="username">Nom Usuari</string>
+    <string name="password">Contrasenya</string>
+    <string name="age">Edat</string>
+    <string name="phone">Telefon</string>
+    <string name="poblation">Poblacio</string>
+    <string name="email">Email</string>
+    <string name="inmune">Inmune</string>
+
+    ------usuarioRegistrar-------
+    <string name="confirm">Confirmar</string>
+    <string name="cancel">Cancel</string>
+
+
+
 </resources>

@@ -8,19 +8,19 @@ public class User {
 
     private String name;
     private String surname;
-    private String telefono;
+    private String phone;
     private Integer age;
     private String poblation;
     private String email;
     private boolean inmune;
 
-    public User(Integer id, String userName, String password, String name, String surname, String telefono, Integer age, String poblation, String email, boolean inmune) {
+    public User(Integer id, String userName, String password, String name, String surname, String phone, Integer age, String poblation, String email, boolean inmune) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.name = name;
         this.surname = surname;
-        this.telefono = telefono;
+        this.phone = phone;
         this.age = age;
         this.poblation = poblation;
         this.email = email;
@@ -68,11 +68,11 @@ public class User {
     }
 
     public String getTelefono() {
-        return telefono;
+        return phone;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setTelefono(String phone) {
+        this.phone = phone;
     }
 
     public Integer getAge() {
