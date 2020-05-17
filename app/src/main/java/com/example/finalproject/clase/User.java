@@ -14,6 +14,10 @@ public class User {
     private String email;
     private boolean inmune;
 
+    public User(){
+
+    }
+
     public User(Integer id, String userName, String password, String name, String surname, String phone, Integer age, String poblation, String email, boolean inmune) {
         this.id = id;
         this.userName = userName;

@@ -6,6 +6,10 @@ public class Offer {
     private String type;
     private String Description;
 
+    public Offer(){
+
+    }
+
     public Offer(Integer id, String type, String description) {
         this.id = id;
         this.type = type;

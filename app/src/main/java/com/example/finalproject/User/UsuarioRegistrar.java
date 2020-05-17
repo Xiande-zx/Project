@@ -98,7 +98,7 @@ public class UsuarioRegistrar extends AppCompatActivity {
                     error(getString(R.string.email));
                 }else{
                     User user = new User(1,userName,password,name,surname,phone,age,poblation,email,true);
-                    Intent intent = new Intent(UsuarioRegistrar.this,UsuarioDetalle.class);
+                    Intent intent = new Intent(UsuarioRegistrar.this,UsuarioServicioOferta.class);
                     startActivity(intent);
                 }
             }

@@ -6,6 +6,10 @@ public class Service {
     private String type;
     private String Description;
 
+    public Service(){
+
+    }
+
     public Service(Integer id, String type, String description) {
         this.id = id;
         this.type = type;

@@ -9,18 +9,22 @@ public class Emp {
     private String description;
     private Integer number;
     private String email;
-    private String direccion;
+    private String adress;
 
     private List<Service> serviceList;
     private List<Offer> offerList;
 
-    public Emp(Integer id, String name, String description, Integer number, String email, String direccion) {
+    public Emp(){
+
+    }
+
+    public Emp(Integer id, String name, String description, Integer number, String email, String adress) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.number = number;
         this.email = email;
-        this.direccion = direccion;
+        this.adress = adress;
     }
 
     public Integer getId() {
@@ -63,12 +67,12 @@ public class Emp {
         this.email = email;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getAdress() {
+        return adress;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setAdress(String direccion) {
+        this.adress = direccion;
     }
 
     public List<Service> getServiceList() {
