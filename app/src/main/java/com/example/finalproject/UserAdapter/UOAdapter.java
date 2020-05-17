@@ -22,8 +22,6 @@ public class UOAdapter extends BaseAdapter {
     protected Activity activity;
     protected ArrayList<Offer> listOffer;
 
-    private TextView name;
-
     public UOAdapter (Activity activity, ArrayList<Offer> listOffer) {
         this.activity = activity;
         this.listOffer = listOffer;
@@ -38,26 +36,26 @@ public class UOAdapter extends BaseAdapter {
 
         Offer offer =listOffer.get(position);
 
-        name = miVista.findViewById(R.id.OfferName);
+        TextView name = miVista.findViewById(R.id.OfferName);
         name.setText(offer.getType());
 
-        return null;
+        return miVista;
     }
 
 
     @Override
     public int getCount() {
-        return 0;
+        return listOffer.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return listOffer.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
 

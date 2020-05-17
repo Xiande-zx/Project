@@ -22,7 +22,6 @@ public class USAdapter extends BaseAdapter {
     protected Activity activity;
     protected ArrayList<Service> listService;
 
-    private TextView name;
 
     public USAdapter (Activity activity, ArrayList<Service> listService) {
         this.activity = activity;
@@ -38,28 +37,28 @@ public class USAdapter extends BaseAdapter {
 
         Service service =listService.get(position);
 
-        name = miVista.findViewById(R.id.ServiceName);
+        TextView name = miVista.findViewById(R.id.ServiceName);
         name.setText(service.getType());
 
 
-        return null;
+        return miVista;
     }
 
 
 
     @Override
     public int getCount() {
-        return 0;
+        return listService.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return listService.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
 

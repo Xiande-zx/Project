@@ -4,7 +4,7 @@ public class Offer {
 
     private Integer id;
     private String type;
-    private String Description;
+    private String description;
 
     public Offer(){
 
@@ -13,7 +13,7 @@ public class Offer {
     public Offer(Integer id, String type, String description) {
         this.id = id;
         this.type = type;
-        Description = description;
+        this.description = description;
     }
 
     public Integer getId() {
@@ -33,10 +33,10 @@ public class Offer {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 }

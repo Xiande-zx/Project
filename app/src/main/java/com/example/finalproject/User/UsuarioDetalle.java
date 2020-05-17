@@ -46,7 +46,7 @@ public class UsuarioDetalle extends AppCompatActivity {
         phone.setText(user.getTelefono());
 
         age=findViewById(R.id.UDage);
-        age.setText(user.getAge());
+        age.setText(user.getAge().toString());
 
         email=findViewById(R.id.UDemail);
         email.setText(user.getEmail());

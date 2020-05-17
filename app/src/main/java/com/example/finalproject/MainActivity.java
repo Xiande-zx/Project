@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.finalproject.User.UsuarioDetalle;
 import com.example.finalproject.User.UsuarioRegistrar;
+import com.example.finalproject.User.UsuarioServicioOferta;
 import com.example.finalproject.clase.User;
 import com.google.gson.Gson;
 
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                                 Gson gson = new Gson();
                                 String userJson = gson.toJson(user);
 
-                                Intent intent = new Intent(MainActivity.this, UsuarioDetalle.class);
+                                Intent intent = new Intent(MainActivity.this, UsuarioServicioOferta.class);
                                 intent.putExtra("userJson", userJson);
                                 startActivity(intent);
                             }else{

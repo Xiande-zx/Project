@@ -12,6 +12,11 @@
         <activity android:name=".UserAdapter.USAdapter"></activity>
         <activity android:name=".UserAdapter.UOAdapter" />
         <activity android:name=".User.UsuarioDetalle" />
+        <activity android:name=".User.UsuarioServicioOferta" />
+        <activity android:name=".User.UsuarioListadoServicios" />
+        <activity android:name=".User.UsuarioListadoOfertas" />
+        <activity android:name=".User.UsuarioDetalleServicio" />
+        <activity android:name=".User.UsuarioDetalleOferta" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
