@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.example.finalproject.Emp.EmpresaRegistrar;
 import com.example.finalproject.R;
+import com.example.finalproject.clase.User;
+import com.google.gson.Gson;
 
 public class UsuarioServicioOferta extends AppCompatActivity {
 
@@ -22,6 +24,13 @@ public class UsuarioServicioOferta extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_servicio_oferta);
+
+        Intent myIntent = getIntent();
+        getIntent().getSerializableExtra("userJson");
+        Gson gson = new Gson();
+        final User user = gson.fromJson(getIntent().getStringExtra("userJson"), User.class);
+
+        final String userStr = getIntent().getStringExtra("userJson");
 
         USOcreateEmp=findViewById(R.id.USOcreateEmp);
         USOcreateEmp.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +46,7 @@ public class UsuarioServicioOferta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UsuarioServicioOferta.this,UsuarioDetalle.class);
+                intent.putExtra("userJson", userStr);
                 startActivity(intent);
             }
         });

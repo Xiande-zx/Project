@@ -12,6 +12,12 @@ import android.widget.Toast;
 
 import com.example.finalproject.User.UsuarioDetalle;
 import com.example.finalproject.User.UsuarioRegistrar;
+import com.example.finalproject.clase.User;
+import com.google.gson.Gson;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         logIn=findViewById(R.id.UsuarioLog);
         logIn.setOnClickListener(new View.OnClickListener() {
@@ -45,8 +49,42 @@ public class MainActivity extends AppCompatActivity {
                 }else if (passwordStr.isEmpty()){
                     error("password");
                 }else {
-                    Intent intent = new Intent(MainActivity.this, UsuarioDetalle.class);
-                    startActivity(intent);
+                    String json ="";
+
+                    try {
+                        InputStream stream = getAssets().open("User.json");
+                        int size = stream.available();
+                        byte[] buffer = new byte[size];
+                        stream.read(buffer);
+                        stream.close();
+                        json  = new String(buffer);
+                    } catch (Exception e) { }
+
+                    ArrayList<User> listUser  = new ArrayList<User>(Arrays.asList(new Gson().fromJson(json, User[].class)));
+
+                    for (int i = 0; i < listUser.size(); i++ ){
+                        if (userNameStr.equalsIgnoreCase(listUser.get(i).getUserName())){
+                            if (passwordStr.equalsIgnoreCase(listUser.get(i).getPassword())){
+
+                                User user = listUser.get(i);
+
+                                Gson gson = new Gson();
+                                String userJson = gson.toJson(user);
+
+                                Intent intent = new Intent(MainActivity.this, UsuarioDetalle.class);
+                                intent.putExtra("userJson", userJson);
+                                startActivity(intent);
+                            }else{
+                                Context context = getApplicationContext();
+                                CharSequence text = "Contrasenya incorrecta!";
+                                int duration = Toast.LENGTH_SHORT;
+
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
+                            }
+                        }
+                    }
+
                 }
 
             }

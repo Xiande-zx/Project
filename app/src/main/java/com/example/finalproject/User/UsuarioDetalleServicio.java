@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.finalproject.R;
+import com.example.finalproject.clase.Offer;
 import com.example.finalproject.clase.Service;
+import com.google.gson.Gson;
 
 public class UsuarioDetalleServicio extends AppCompatActivity {
 
@@ -25,7 +27,10 @@ public class UsuarioDetalleServicio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_detalle_servicio);
 
-        service=new Service();
+        Intent myIntent = getIntent();
+        getIntent().getSerializableExtra("serviceJson");
+        Gson gson = new Gson();
+        service =gson.fromJson(getIntent().getStringExtra("serviceJson"), Service.class);
 
         type=findViewById(R.id.UDStype);
         type.setText(service.getType());

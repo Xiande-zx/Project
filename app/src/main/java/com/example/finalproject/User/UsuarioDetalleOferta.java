@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.finalproject.R;
 import com.example.finalproject.clase.Offer;
+import com.google.gson.Gson;
 
 public class UsuarioDetalleOferta extends AppCompatActivity {
 
@@ -24,7 +25,10 @@ public class UsuarioDetalleOferta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_detalle_oferta);
 
-        offer=new Offer();
+        Intent myIntent = getIntent();
+        getIntent().getSerializableExtra("offerJson");
+        Gson gson = new Gson();
+        offer =gson.fromJson(getIntent().getStringExtra("offerJson"), Offer.class);
 
         emp=findViewById(R.id.UDOemp);
         emp.setOnClickListener(new View.OnClickListener() {

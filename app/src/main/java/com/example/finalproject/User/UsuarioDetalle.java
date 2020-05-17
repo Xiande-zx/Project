@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.finalproject.R;
 import com.example.finalproject.clase.User;
+import com.google.gson.Gson;
 
 public class UsuarioDetalle extends AppCompatActivity {
 
@@ -30,7 +31,10 @@ public class UsuarioDetalle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_detalle);
 
-        user=new User();
+        Intent myIntent = getIntent();
+        getIntent().getSerializableExtra("userJson");
+        Gson gson = new Gson();
+        final User user = gson.fromJson(getIntent().getStringExtra("userJson"), User.class);
 
         name=findViewById(R.id.UDname);
         name.setText(user.getName());
