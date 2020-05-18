@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Boolean has = false;
+
                 username=findViewById(R.id.userName);
                 password=findViewById(R.id.Rpassword);
 
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
                     for (int i = 0; i < listUser.size(); i++ ){
                         if (userNameStr.equalsIgnoreCase(listUser.get(i).getUserName())){
+                            has=true;
                             if (passwordStr.equalsIgnoreCase(listUser.get(i).getPassword())){
 
                                 User user = listUser.get(i);
@@ -84,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
                                 toast.show();
                             }
                         }
+                    }
+                    if (has==false){
+                        Context context = getApplicationContext();
+                        CharSequence text = "No existeix l'usuari";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }
 
                 }

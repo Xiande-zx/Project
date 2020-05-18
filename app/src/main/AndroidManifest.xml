@@ -17,6 +17,10 @@
         <activity android:name=".User.UsuarioListadoOfertas" />
         <activity android:name=".User.UsuarioDetalleServicio" />
         <activity android:name=".User.UsuarioDetalleOferta" />
+        <activity android:name=".User.UsuarioRegistrar" />
+        <activity android:name=".Emp.EmpresaServiciosOfertas" />
+        <activity android:name=".Emp.EmpresaDetalleGeneral" />
+        <activity android:name=".Emp.EmpresaRegistrar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

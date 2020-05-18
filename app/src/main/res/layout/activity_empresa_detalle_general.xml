@@ -7,7 +7,7 @@
     tools:context=".Emp.EmpresaDetalleGeneral">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/EDGdescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -15,10 +15,10 @@
         android:layout_marginTop="36dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/EDGname" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/EDGphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,21 +26,21 @@
         android:layout_marginTop="36dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/EDGdescription" />
 
     <TextView
-        android:id="@+id/textView17"
-        android:layout_width="54dp"
-        android:layout_height="25dp"
+        android:id="@+id/EDGemail"
+        android:layout_width="144dp"
+        android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="36dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/EDGphone" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/EDGadress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -48,7 +48,7 @@
         android:layout_marginTop="36dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/EDGemail" />
 
     <Button
         android:id="@+id/button20"
@@ -57,12 +57,12 @@
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="48dp"
-        android:text="Button"
+        android:text="X"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/EDGadress" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/EDGname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

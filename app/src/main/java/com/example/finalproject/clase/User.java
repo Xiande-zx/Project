@@ -1,5 +1,7 @@
 package com.example.finalproject.clase;
 
+import android.content.Intent;
+
 public class User {
     private Integer id;
 
@@ -13,6 +15,8 @@ public class User {
     private String poblation;
     private String email;
     private boolean inmune;
+
+    private Integer empId;
 
     public User(){
 
@@ -109,5 +113,13 @@ public class User {
 
     public void setInmune(boolean inmune) {
         this.inmune = inmune;
+    }
+
+    public Integer getEmpId() {
+        return empId;
+    }
+
+    public void setEmpId(Integer empId) {
+        this.empId = empId;
     }
 }

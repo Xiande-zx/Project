@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.finalproject.Emp.EmpresaRegistrar;
+import com.example.finalproject.Emp.EmpresaServiciosOfertas;
 import com.example.finalproject.R;
 import com.example.finalproject.clase.User;
 import com.google.gson.Gson;
@@ -36,7 +37,8 @@ public class UsuarioServicioOferta extends AppCompatActivity {
         USOcreateEmp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UsuarioServicioOferta.this, EmpresaRegistrar.class);
+                Intent intent = new Intent(UsuarioServicioOferta.this, EmpresaServiciosOfertas.class);
+                intent.putExtra("idEmp",user.getEmpId());
                 startActivity(intent);
             }
         });

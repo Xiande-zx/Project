@@ -9,6 +9,7 @@
         "age" : 1,
         "poblation" : "bcn",
         "email" : "email@emailk.com",
-        "inmune" : true
+        "inmune" : true,
+        "empId" : 10
   }
 ]

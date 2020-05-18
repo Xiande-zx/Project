@@ -11,9 +11,6 @@ public class Emp {
     private String email;
     private String adress;
 
-    private List<Service> serviceList;
-    private List<Offer> offerList;
-
     public Emp(){
 
     }
@@ -75,19 +72,4 @@ public class Emp {
         this.adress = direccion;
     }
 
-    public List<Service> getServiceList() {
-        return serviceList;
-    }
-
-    public void setServiceList(List<Service> serviceList) {
-        this.serviceList = serviceList;
-    }
-
-    public List<Offer> getOfferList() {
-        return offerList;
-    }
-
-    public void setOfferList(List<Offer> offerList) {
-        this.offerList = offerList;
-    }
 }

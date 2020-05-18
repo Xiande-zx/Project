@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Button"
+        android:text="emp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +24,7 @@
         android:layout_marginStart="188dp"
         android:layout_marginLeft="188dp"
         android:layout_marginTop="16dp"
-        android:text="Button"
+        android:text="detalle"
         app:layout_constraintStart_toEndOf="@+id/USOcreateEmp"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +46,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="44dp"
-        android:text="Button"
+        android:text="servei"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -57,7 +57,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="44dp"
-        android:text="Button"
+        android:text="oferta"
         app:layout_constraintStart_toEndOf="@+id/USOservice"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
